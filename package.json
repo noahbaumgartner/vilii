@@ -4,20 +4,22 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run build_db;next build",
+    "build_db": "prisma db push; prisma generate",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.15.0",
     "bcryptjs": "^2.4.3",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.14.1",
     "jsonwebtoken": "^9.0.2",
     "next": "14.2.3",
     "preline": "^2.3.0",
+    "prisma": "^5.15.0",
     "react": "^18",
     "react-dom": "^18",
-    "sequelize": "^6.37.3",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {

@@ -1,4 +1,12 @@
+import { Arvo } from "next/font/google";
 import Image from "next/image";
+
+const arvo = Arvo({
+  subsets: ["latin"],
+  style: "normal",
+  display: "swap",
+  weight: "700",
+});
 
 export default function Home() {
   return (
@@ -47,7 +55,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
+            <span className={arvo.className}>Docs </span>
             <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
               -&gt;
             </span>
