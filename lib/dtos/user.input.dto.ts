@@ -2,7 +2,7 @@ import { IsEmail, IsString, IsStrongPassword } from "class-validator";
 import { BaseDTO } from "./base.dto";
 import { ErrorStates } from "../constants";
 
-export class UserDTO extends BaseDTO {
+export class UserInputDTO extends BaseDTO {
   @IsString({ message: "First name must be a string" })
   firstName: string;
 
